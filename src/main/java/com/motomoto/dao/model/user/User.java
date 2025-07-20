@@ -6,12 +6,17 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "user")
+@Getter
+@Setter
 public class User extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,4 +56,28 @@ public class User extends Auditable {
             inverseJoinColumns = @JoinColumn(name = "listing_id")
     )
     private Set<Listing> observedListings = new HashSet<>();
+
+    public void setPassword(String password) {
+        this.password = hashPassword(password);
+    }
+
+    public boolean verifyPassword(String plainTextPassword) {
+        return BCrypt.checkpw(plainTextPassword, this.password);
+    }
+
+    private String hashPassword(String plainTextPassword) {
+        return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt(12));
+    }
+
+    public void addObservedListing(Listing listing) {
+        this.observedListings.add(listing);
+    }
+
+    public void removeObservedListing(Listing listing) {
+        this.observedListings.remove(listing);
+    }
+
+    public boolean isObserving(Listing listing) {
+        return this.observedListings.contains(listing);
+    }
 }
