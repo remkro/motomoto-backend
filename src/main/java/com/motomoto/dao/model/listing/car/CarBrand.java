@@ -1,6 +1,6 @@
 package com.motomoto.dao.model.listing.car;
 
-import com.motomoto.dao.model.listing.Auditable;
+import com.motomoto.dao.model.Auditable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

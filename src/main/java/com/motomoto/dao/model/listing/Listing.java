@@ -1,13 +1,17 @@
 package com.motomoto.dao.model.listing;
 
+import com.motomoto.dao.model.Auditable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.math.BigDecimal;
 
-@MappedSuperclass
-public class Listing extends Auditable {
+@Entity
+@Table(name = "listing")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "listing_type")
+public abstract class Listing extends Auditable {
     @Id
     @UuidGenerator
     @Column(length = 36)

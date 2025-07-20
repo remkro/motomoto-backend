@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "car_listing")
+@DiscriminatorValue("CAR")
 public class CarListing extends Listing {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "brand_id", nullable = false)

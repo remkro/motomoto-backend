@@ -1,4 +1,4 @@
-package com.motomoto.dao.model.listing;
+package com.motomoto.dao.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
