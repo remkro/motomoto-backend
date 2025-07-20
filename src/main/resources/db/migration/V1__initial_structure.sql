@@ -29,7 +29,7 @@ CREATE TABLE listing (
     mileage INTEGER NOT NULL CHECK (mileage >= 0),
     fuel_type VARCHAR(20) NOT NULL,
     transmission VARCHAR(20) NOT NULL,
-    is_featured BOOLEAN NOT NULL DEFAULT FALSE,
+    featured BOOLEAN NOT NULL DEFAULT FALSE,
     created_by VARCHAR(255),
     created_on TIMESTAMP,
     last_modified_by VARCHAR(255),
