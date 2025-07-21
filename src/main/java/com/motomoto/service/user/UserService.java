@@ -22,11 +22,16 @@ public class UserService {
         User user = new User();
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
+        user.setDisplayName(extractDisplayName(request.getEmail()));
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
         user.setActive(true);
         user.setCreatedBy("REGISTRATION_PROCESS");
 
         userRepository.save(user);
+    }
+
+    private String extractDisplayName(String email) {
+        return email.substring(0, email.indexOf("@"));
     }
 }
