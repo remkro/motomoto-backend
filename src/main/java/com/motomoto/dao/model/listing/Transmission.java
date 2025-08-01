@@ -4,7 +4,7 @@ public enum Transmission {
     MANUAL("Manualna"),
     AUTOMATIC("Automatyczna");
 
-    private String friendlyName;
+    private final String friendlyName;
 
     Transmission(String friendlyName) {
         this.friendlyName = friendlyName;

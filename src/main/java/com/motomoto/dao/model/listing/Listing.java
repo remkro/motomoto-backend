@@ -24,7 +24,7 @@ public abstract class Listing extends Auditable {
     private Integer mileage;
 
     @Enumerated(EnumType.STRING)
-    private FuelType fuelType;
+    private Fuel fuel;
 
     @Enumerated(EnumType.STRING)
     private Transmission transmission;

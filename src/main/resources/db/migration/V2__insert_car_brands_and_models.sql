@@ -1,0 +1,203 @@
+INSERT INTO car_brands (id, name, display_name, created_by, created_on)
+VALUES ('a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Audi', 'Audi AG', 'system', CURRENT_TIMESTAMP),
+       ('6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'Bmw', 'BMW AG', 'system', CURRENT_TIMESTAMP),
+       ('908e8a6a-6b91-4a83-9289-622064bcda70', 'Citroen', 'Citroën', 'system', CURRENT_TIMESTAMP),
+       ('5e7d681f-0b0b-40f3-a73c-649c47c99a94', 'Fiat', 'FIAT', 'system', CURRENT_TIMESTAMP),
+       ('cfe49f31-99df-4ff5-b933-019ed889ba3b', 'Ford', 'Ford Motor Company', 'system', CURRENT_TIMESTAMP),
+       ('3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'Hyundai', 'Hyundai Motor Company', 'system', CURRENT_TIMESTAMP),
+       ('40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'Kia', 'Kia Corporation', 'system', CURRENT_TIMESTAMP),
+       ('ffe09b1d-d012-4c33-b6cb-40efcb626c2d', 'Mazda', 'Mazda Motor Corporation', 'system', CURRENT_TIMESTAMP),
+       ('6978413f-2eb1-4d40-9f5d-e880002e0043', 'Mercedes-Benz', 'Mercedes-Benz Group AG', 'system', CURRENT_TIMESTAMP),
+       ('64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'Nissan', 'Nissan Motor Co., Ltd.', 'system', CURRENT_TIMESTAMP),
+       ('ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'Opel', 'Opel Automobile GmbH', 'system', CURRENT_TIMESTAMP),
+       ('1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', 'Peugeot', 'Peugeot S.A.', 'system', CURRENT_TIMESTAMP),
+       ('7d960b97-b58f-46c5-bac9-857fc7a326d5', 'Renault', 'Renault S.A.', 'system', CURRENT_TIMESTAMP),
+       ('b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'Seat', 'SEAT, S.A.', 'system', CURRENT_TIMESTAMP),
+       ('ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'Skoda', 'Škoda Auto', 'system', CURRENT_TIMESTAMP),
+       ('d08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'Toyota', 'Toyota Motor Corporation', 'system', CURRENT_TIMESTAMP),
+       ('8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'Volkswagen', 'Volkswagen AG', 'system', CURRENT_TIMESTAMP),
+       ('d58be62c-c206-4b9f-81aa-5c0120b99892', 'Volvo', 'Volvo Car Corporation', 'system', CURRENT_TIMESTAMP);
+
+INSERT INTO car_models (id, brand_id, name, display_name, default_fuel, default_body, created_by, created_on)
+VALUES
+    -- Audi
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A1', 'A1', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A2', 'A2', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A3', 'A3', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A4', 'A4', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A5', 'A5', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A6', 'A6', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A7', 'A7', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'A8', 'A8', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Q3', 'Q3', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Q5', 'Q5', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Q7', 'Q7', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Q8', 'Q8', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'TT', 'TT', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'R8', 'R8', 'GASOLINE', 'COUPE', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S3', 'S3', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S4', 'S4', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S5', 'S5', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S6', 'S6', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S7', 'S7', 'GASOLINE', 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'S8', 'S8', 'GASOLINE', 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RS3', 'RS3', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RS4', 'RS4', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RS5', 'RS5', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RS6', 'RS6', 'GASOLINE', 'WAGON', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RS7', 'RS7', 'GASOLINE', 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RSQ3', 'RSQ3', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'RSQ8', 'RSQ8', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'E-TRON-GT', 'e-tron GT', 'ELECTRIC', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'a3f1c9d6-7eaf-4fa1-90e2-1e1ec98f4b12', 'Q4-E-TRON', 'Q4 e-tron', 'ELECTRIC', 'SUV', 'system', CURRENT_TIMESTAMP),
+
+    -- BMW
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '1-SERIES', 'Seria 1', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '2-SERIES', 'Seria 2', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '3-SERIES', 'Seria 3', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '4-SERIES', 'Seria 4', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '5-SERIES', 'Seria 5', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '6-SERIES', 'Seria 6', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '7-SERIES', 'Seria 7', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', '8-SERIES', 'Seria 8', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X1', 'X1', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X2', 'X2', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X3', 'X3', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X4', 'X4', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X5', 'X5', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X6', 'X6', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X7', 'X7', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'Z3', 'Z3', 'GASOLINE', 'CONVERTIBLE', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'Z4', 'Z4', 'GASOLINE', 'CONVERTIBLE', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'M2', 'M2', 'GASOLINE', 'COUPE', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'M3', 'M3', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'M4', 'M4', 'GASOLINE', 'COUPE', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'M5', 'M5', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'M8', 'M8', 'GASOLINE', NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X3M', 'X3 M', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X4M', 'X4 M', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X5M', 'X5 M', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'X6M', 'X6 M', 'GASOLINE', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'I3', 'i3', 'ELECTRIC', 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'I4', 'i4', 'ELECTRIC', 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'I7', 'i7', 'ELECTRIC', 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'IX', 'iX', 'ELECTRIC', 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6b9c4fd2-b09b-44a8-a2e7-f812a4a2c944', 'IX3', 'iX3', 'ELECTRIC', 'SUV', 'system', CURRENT_TIMESTAMP),
+
+    -- Citroen
+    (UUID(), '908e8a6a-6b91-4a83-9289-622064bcda70', 'BERLINGO', 'Berlingo', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '908e8a6a-6b91-4a83-9289-622064bcda70', 'C3', 'C3', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '908e8a6a-6b91-4a83-9289-622064bcda70', 'C4', 'C4', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '908e8a6a-6b91-4a83-9289-622064bcda70', 'C5', 'C5', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+
+    -- Ford
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'FOCUS', 'Focus', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'FIESTA', 'Fiesta', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'MONDEO', 'Mondeo', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'KUGA', 'Kuga', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'TRANSIT', 'Transit', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'cfe49f31-99df-4ff5-b933-019ed889ba3b', 'MUSTANG', 'Mustang', 'GASOLINE', 'COUPE', 'system', CURRENT_TIMESTAMP),
+
+    -- Hyundai
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'I20', 'i20', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'TUCSON', 'Tucson', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'I30', 'i30', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'SANTA-FE', 'Santa Fe', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'ELANTRA', 'Elantra', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '3276cd6d-2558-4c5a-b4a3-b01626f5e9e9', 'KONA', 'Kona', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+
+    -- Kia
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'CEED', 'Ceed', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'SPORTAGE', 'Sportage', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'PICANTO', 'Picanto', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'RIO', 'Rio', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'SORENTO', 'Sorento', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '40d08d7f-3b9c-4ac3-ae12-f4c8b3a4eeb4', 'STONIC', 'Stonic', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+
+    -- Mazda
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', '3', '3', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', 'CX-5', 'CX-5', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', '2', '2', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', '6', '6', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', 'CX-3', 'CX-3', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ffe09b1d-d012-4c33-b6cb-40efcb626c2d', 'MX-5', 'MX-5', 'GASOLINE', 'CONVERTIBLE', 'system', CURRENT_TIMESTAMP),
+
+    -- Mercedes-Benz
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'C-CLASS', 'C klasa', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'GLC', 'GLC', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'E-CLASS', 'E klasa', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'A-CLASS', 'A klasa', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'GLE', 'GLE', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '6978413f-2eb1-4d40-9f5d-e880002e0043', 'SPRINTER', 'Sprinter', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Nissan
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'QASHQAI', 'Qashqai', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'LEAF', 'Leaf', 'ELECTRIC', 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'MICRA', 'Micra', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'X-TRAIL', 'X-Trail', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'JUKE', 'Juke', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '64a08be9-9d09-4a2d-b1fc-e9de4eaf0620', 'NV200', 'NV200', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Opel
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'CORSA', 'Corsa', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'ASTRA', 'Astra', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'INSIGNIA', 'Insignia', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'MOKKA', 'Mokka', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'CROSSLAND', 'Crossland', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ace50d96-d3e5-4fc2-b4a1-62e5081c4fef', 'VIVARO', 'Vivaro', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Peugeot
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', '208', '208', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', '3008', '3008', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', '308', '308', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', '2008', '2008', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', '508', '508', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '1d00a71d-ff81-4f9e-9d62-f5ab83248ef1', 'PARTNER', 'Partner', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Renault
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'CLIO', 'Clio', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'CAPTUR', 'Captur', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'MEGANE', 'Megane', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'KADJAR', 'Kadjar', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'SCENIC', 'Scenic', NULL, 'MPV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '7d960b97-b58f-46c5-bac9-857fc7a326d5', 'KANGOO', 'Kangoo', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Seat
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'IBIZA', 'Ibiza', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'LEON', 'Leon', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'ARONA', 'Arona', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'ATECA', 'Ateca', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'TARRACO', 'Tarraco', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'b69fdd30-08ea-4ee2-8722-e26fa69fbbef', 'ALHAMBRA', 'Alhambra', NULL, 'MPV', 'system', CURRENT_TIMESTAMP),
+
+    -- Skoda
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'FABIA', 'Fabia', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'OCTAVIA', 'Octavia', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'SUPERB', 'Superb', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'KAROQ', 'Karoq', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'KODIAQ', 'Kodiaq', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'ce250eb7-09d5-4c61-9819-03ae6a41fef6', 'KAMIQ', 'Kamiq', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+
+    -- Toyota
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'COROLLA', 'Corolla', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'RAV4', 'RAV4', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'YARIS', 'Yaris', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'CAMRY', 'Camry', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'PRIUS', 'Prius', 'HYBRID', 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd08b6cbe-ec9c-4b1a-9a47-72ea8a12c1f6', 'HIACE', 'HiAce', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Volkswagen
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'GOLF', 'Golf', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'PASSAT', 'Passat', NULL, NULL, 'system', CURRENT_TIMESTAMP),
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'POLO', 'Polo', NULL, 'COMPACT', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'TIGUAN', 'Tiguan', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'TOURAN', 'Touran', NULL, 'MPV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), '8a4039d8-8a63-4cf0-b6aa-bc88df31e380', 'CADDY', 'Caddy', NULL, 'VAN', 'system', CURRENT_TIMESTAMP),
+
+    -- Volvo
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'XC60', 'XC60', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'S60', 'S60', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'XC90', 'XC90', NULL, 'SUV', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'V60', 'V60', NULL, 'WAGON', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'S90', 'S90', NULL, 'SEDAN', 'system', CURRENT_TIMESTAMP),
+    (UUID(), 'd58be62c-c206-4b9f-81aa-5c0120b99892', 'XC40', 'XC40', NULL, 'SUV', 'system', CURRENT_TIMESTAMP);

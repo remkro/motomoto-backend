@@ -1,15 +1,15 @@
 package com.motomoto.dao.model.listing;
 
-public enum FuelType {
+public enum Fuel {
     GASOLINE("Benzyna"),
     DIESEL("Diesel"),
     ELECTRIC("Elektryczny"),
     HYBRID("Hybryda"),
     LPG("Benzyna + LPG");
 
-    private String friendlyName;
+    private final String friendlyName;
 
-    FuelType(String friendlyName) {
+    Fuel(String friendlyName) {
         this.friendlyName = friendlyName;
     }
 }
