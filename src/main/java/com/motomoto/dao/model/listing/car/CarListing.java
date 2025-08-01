@@ -14,4 +14,7 @@ public class CarListing extends Listing {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "model_id")
     private CarModel model;
+
+    @Enumerated(EnumType.STRING)
+    private CarBody body;
 }
