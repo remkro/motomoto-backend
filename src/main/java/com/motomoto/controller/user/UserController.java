@@ -1,6 +1,8 @@
 package com.motomoto.controller.user;
 
+import com.motomoto.controller.dto.StatusResponseDto;
 import com.motomoto.controller.user.dto.CreateUserRequestDto;
+import com.motomoto.dao.model.user.User;
 import com.motomoto.service.user.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.Instant;
+
 @RestController
 @RequestMapping("/api/user")
 @RequiredArgsConstructor
@@ -20,17 +24,22 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<String> create(@Valid @RequestBody CreateUserRequestDto request) {
+    public ResponseEntity<StatusResponseDto> create(@Valid @RequestBody CreateUserRequestDto request) {
         log.info("Received request to create user, first name: {}, last name: {}, email: {}",
                 request.getFirstName(),
                 request.getLastName(),
                 request.getEmail()
         );
 
-        userService.create(request);
+        User user = userService.create(request);
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body("User created successfully");
+                .body(
+                        StatusResponseDto.builder()
+                                .status("User created, id: " + user.getId())
+                                .timestamp(Instant.now())
+                                .build()
+                );
     }
 }
