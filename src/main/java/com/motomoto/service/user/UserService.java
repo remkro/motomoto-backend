@@ -14,7 +14,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     @Transactional
-    public void create(CreateUserRequestDto request) {
+    public User create(CreateUserRequestDto request) {
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new UserAlreadyExistsException("User with email " + request.getEmail() + " already exists");
         }
@@ -28,7 +28,7 @@ public class UserService {
         user.setActive(true);
         user.setCreatedBy("REGISTRATION_PROCESS");
 
-        userRepository.save(user);
+        return userRepository.save(user);
     }
 
     private String extractDisplayName(String email) {
